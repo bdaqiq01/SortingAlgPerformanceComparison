@@ -5,6 +5,7 @@
 #include <random>
 #include <numeric>
 # include <chrono>
+#include "plotSort.h"
 using namespace std;
 
 bool isSorted(const int arr[], int n)
@@ -519,12 +520,13 @@ vector<double> measureSortTime(vector<int>& vector_array, int size, bool worstBu
 }
 
 
+
 int main()
 {
     //assesing the perf in alredy sorted arrays aka best case
     int rows = 40;
     int cols = 6; 
-    int max_size = 1000;
+    int max_size = 20000;
     int step = 500; 
     vector<string> colNames = {"Bubble", "Insertion", "Selection", "Merge", "QuickRandom", "QuickMOM"};
     vector<vector<double>> sortedArrayPerf(rows, vector<double>(cols, 0.0));
